@@ -137,28 +137,171 @@ section {
   animation: fadeInUp 1s ease both;
 }
 
-.hero-content h1{
-    font-size: 42px;
-    margin-bottom: var(--m-2);
+.hero-content h1 {
+  font-size: 42px;
+  margin-bottom: var(--m-2);
 }
 
-.hero-content p{
-    margin-bottom: var(--m-3);
-    color: #c9c9e0;
+.hero-content p {
+  margin-bottom: var(--m-3);
+  color: #c9c9e0;
 }
 
 .btn {
-    display: inline-block;
-    background-color: var(--accent);
-    border-radius: 8px;
-    text-decoration: none;
-    padding: var(--p-2) var(--p-3);
-    font-weight: 700;
-    color: #fff;
-    transition: transform 0.2s;
+  display: inline-block;
+  background-color: var(--accent);
+  border-radius: 8px;
+  text-decoration: none;
+  padding: var(--p-2) var(--p-3);
+  font-weight: 700;
+  color: #fff;
+  transition: transform 0.2s;
 }
 
 .btn:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
+/* Title for Sections */
+section h2 {
+  text-align: center;
+  color: var(--secondary);
+  font-size: 32px;
+  margin-bottom: var(--m-3);
+}
+
+/* Planet Section */
+.planet-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: var(--m-3);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.planet-card {
+  background-color: rgba(42, 39, 39, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: var(--p-3);
+  text-align: center;
+  transition:
+    transform 0.25s,
+    border-color 0.25s;
+}
+
+.planet-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--secondary);
+  cursor: pointer;
+}
+
+.planet-card h3 {
+  color: var(--secondary);
+  margin: var(--m-2) 0 var(--m-1);
+}
+
+.planet-card p {
+  color: #b8b8d0;
+  font-size: 14px;
+}
+
+/* Planets Shape + Animation */
+.planet {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin: 0 auto;
+  animation: spin 9s linear infinite;
+}
+
+/* Planets colors */
+.mercury {
+  background: radial-gradient(circle at 30% 30%, #b0b0b0, #6b6b6b);
+}
+.venus {
+  background: radial-gradient(circle at 30% 30%, #e8c07d, #a5762f);
+}
+.earth {
+  background: radial-gradient(circle at 30% 30%, #6ab7ff, #1e6b3a);
+}
+.mars {
+  background: radial-gradient(circle at 30% 30%, #ff8c66, #6b6b6b);
+}
+.jupiter {
+  background: radial-gradient(circle at 30% 30%, #e0b088, #9c6b3f);
+}
+.saturn {
+  background: radial-gradient(circle at 30% 30%, #f0d9a0, #b89b5e);
+}
+
+/* Bento Section */
+.bento {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 120px;
+  gap: var(--p-2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.bento-item {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  padding: var(--p-2);
+  font-weight: 600;
+  color: var(--secondary);
+  transition: background-color 0.3s;
+}
+
+.bento-item:hover {
+  background-color: rgba(108, 92, 231, 0.25);
+}
+
+.feature {
+  grid-column: 1/3;
+  grid-row: 1/3;
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #fff;
+  text-align: center;
+}
+
+.feature h3 {
+  margin-bottom: var(--m-1);
+}
+
+.wide {
+  grid-column: 3/5;
+}
+
+/* Status Section */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /*four equal columns */
+  gap: var(--p-2);
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.stat {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 12px;
+  padding: var(--p-3) var(--p-2);
+}
+
+.stat strong {
+  display: block;
+  font-size: 34px;
+  color: var(--accent);
+}
+
+/* Footer Section */
+.site-footer {
+  text-align: center;
+  padding: var(--p-3);
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #9a9ac0;
+}
